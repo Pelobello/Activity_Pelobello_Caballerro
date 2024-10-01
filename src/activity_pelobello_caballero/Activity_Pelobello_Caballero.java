@@ -9,12 +9,10 @@ package activity_pelobello_caballero;
  * @author Calyle
  */
 public class Activity_Pelobello_Caballero {
-
-    /**
-     * @param args the command line arguments
-     */
+    
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+        System.out.println("hello world");
     }
     
 }
