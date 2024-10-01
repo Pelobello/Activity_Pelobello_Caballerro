@@ -10,11 +10,25 @@ package activity_pelobello_caballero;
  */
 public class Activity_Pelobello_Caballero {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
     
+    public static void main(String[] args) {
+      
+        Calculator calculator = new Calculator();
+        
+        System.out.println(calculator.calculate(10, 2, 3,5));
+
+        
+    }
+  
 }
+   class Calculator{
+         public int calculate(int fnum,int snum,int tnum,int fonum){
+        
+        int total = fnum + snum -tnum;
+       
+        int totalthree = total/ fonum;
+        return totalthree;
+         }
+      
+         
+    }
