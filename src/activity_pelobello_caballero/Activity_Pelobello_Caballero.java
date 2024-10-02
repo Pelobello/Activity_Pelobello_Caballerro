@@ -17,6 +17,9 @@ public class Activity_Pelobello_Caballero {
         
         System.out.println(calculator.calculate(10, 2, 3,5));
         System.out.println("");
+        mean Mean = new mean();
+        double data[] = {1,2,3,4,5};
+        Mean.mean(data);
 
         
     }
