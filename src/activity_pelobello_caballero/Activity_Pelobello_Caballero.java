@@ -16,6 +16,7 @@ public class Activity_Pelobello_Caballero {
         Calculator calculator = new Calculator();
         
         System.out.println(calculator.calculate(10, 2, 3,5));
+        System.out.println("");
 
         
     }
