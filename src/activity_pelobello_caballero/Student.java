@@ -27,11 +27,11 @@ public class Student {
     }
 
   
-    public double getGraderLevel() {
+    public int getGraderLevel() {
         return graderLevel;
     }
 
-    public Student(String fullName, int age, double graderLevel) {
+    public Student(String fullName, int age, int graderLevel) {
         this.fullName = fullName;
         this.age = age;
         this.graderLevel = graderLevel;
@@ -39,7 +39,7 @@ public class Student {
 
   
     
-    public void setGraderLevel(double graderLevel) {
+    public void setGraderLevel(int graderLevel) {
         this.graderLevel = graderLevel;
     }
 
@@ -47,5 +47,5 @@ public class Student {
     }
    private String fullName;
    private int age;
-   private double graderLevel;
+   private int graderLevel;
 }

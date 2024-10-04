@@ -6,6 +6,7 @@ package activity_pelobello_caballero;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 
 public class Activity_Pelobello_Caballero {
@@ -14,26 +15,67 @@ public class Activity_Pelobello_Caballero {
     public static void main(String[] args) {
       List<Student>list = new ArrayList<>();
         Calculator calculator = new Calculator();
+        Scanner scan = new Scanner(System.in);
         
         System.out.println(calculator.calculate(10, 2, 3,5));
         System.out.println("");
         mean Mean = new mean();
         double data[] = {1,2,3,4,5};
         Mean.mean(data);
-        Student student = new Student("Dazzle Pelobello", 20, 1.5);
-        Student student1 = new Student("Dazzle Pelobello", 20, 1.5);
-        Student student2 = new Student("Dazzle Pelobello", 20, 1.5);
+       
        
         
-        list.add(student);
-        list.add(student1);
-        list.add(student2);
-        
-        
-        System.out.println("Student Data");
-        for (Student studentdata : list) {
+           while (true) {            
+            System.out.print("Enter Student Full Name: ");
+            String studentFullName = scan.nextLine();
             
-            System.out.println("FullName: "+studentdata.getFullName()+"\n"+"Age: " +studentdata.getAge() +"\n"+"Grade Level: "+studentdata.getGraderLevel()+"\n");
+            int studentAge = 0;
+            int studentGradeLvl = 0;
+            boolean validInput = false;
+            
+          
+            while (!validInput) {
+                System.out.print("Enter Student Age: ");
+                if (scan.hasNextInt()) {
+                    studentAge = scan.nextInt();
+                    scan.nextLine();  
+                    validInput = true;
+                } else {
+                    System.out.println("Invalid input. Please enter a valid integer for age.");
+                    scan.nextLine(); 
+                }
+            }
+            
+          
+            validInput = false;
+            
+          
+            while (!validInput) {
+                System.out.print("Enter Student Grade Level: ");
+                if (scan.hasNextInt()) {
+                    studentGradeLvl = scan.nextInt();
+                    scan.nextLine();  
+                    System.out.println("");
+                    validInput = true;
+                } else {
+                    System.out.println("Invalid input. Please enter a valid integer for grade level.");
+                    scan.nextLine(); 
+                }
+            }
+
+            // Create student object and add to list
+            Student student = new Student(studentFullName, studentAge, studentGradeLvl);
+            list.add(student);
+
+            // Print student data
+            for (Student studentData : list) {
+                System.out.println("FullName: " + studentData.getFullName().toUpperCase() + "\n" +
+                                   "Age: " + studentData.getAge() + "\n" +
+                                   "Grade Level: " + studentData.getGraderLevel() + "\n");
+            }
+             
+             
+             
         }
 
         
